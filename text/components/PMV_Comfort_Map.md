@@ -52,7 +52,12 @@ Reports, errors, warnings, etc.
 A folder containing CSV maps of Operative Temperature for each sensor grid at each time step of the analysis. Alternatively, if the write_set_map_ option is used, the CSV maps here will contain Standard Effective Temperature (SET). This can be connected to the "HB Read Thermal Matrix" component to parse detailed results into Grasshopper. Values are in Celsius. 
 * ##### condition
 A folder containing CSV maps of comfort conditions for each sensor grid at each time step of the analysis. This can be connected to the "HB Read Thermal Matrix" component to parse detailed results into Grasshopper. Values are as follows. 
-.    -1 = unacceptably cold conditions .     0 = neutral (comfortable) conditions .    +1 = unacceptably hot conditions 
+
+    * -1 = unacceptably cold conditions
+
+    *  0 = neutral (comfortable) conditions
+
+    * +1 = unacceptably hot conditions
 * ##### pmv
 A folder containing CSV maps of the Predicted Mean Vote (PMV) for each sensor grid at each time step of the analysis. This can be connected to the "HB Read Thermal Matrix" component to parse detailed results into Grasshopper. This can be used to understand not just whether conditions are acceptable but how uncomfortably hot or cold they are. 
 * ##### TCP
