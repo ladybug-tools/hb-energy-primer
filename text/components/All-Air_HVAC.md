@@ -23,7 +23,6 @@ Text to set the name for the HVAC system and to be incorporated into unique HVAC
 * ##### economizer 
 Text to indicate the type of air-side economizer used on the HVAC system. Economizers will mix in a greater amount of outdoor air to cool the zone (rather than running the cooling system) when the zone needs cooling and the outdoor air is cooler than the zone. Choose from the options below. (Default: NoEconomizer). 
 
-
     * NoEconomizer
 
     * DifferentialDryBulb
