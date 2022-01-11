@@ -18,6 +18,8 @@ A list of Honeybee Rooms for which annual loads will be computed.
 An optional list of Honeybee Shades that can block the sun to the input _rooms. 
 * ##### epw_file [Required]
 Path to an .epw file on your system as a text string. 
+* ##### north 
+A number between -360 and 360 for the counterclockwise difference between the North and the positive Y-axis in degrees. 90 is West and 270 is East. (Default: 0). 
 * ##### timestep 
 An integer for the number of timesteps per hour at which the energy balance calculation will be run. This has a dramatic impact on the speed of the simulation and the accuracy of results. Higher timesteps lead to longer simulations and more accurate results. At the lowest aceptable timestep of 1, the results can have an error up to 5% but increasing the timestep to 4 should drop errors to below 1%. (Default: 1). The following values are acceptable: (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) 
 * ##### cool_cop 
@@ -46,6 +48,8 @@ A list of numbers for the 4-5 output load terms normalized by the floor area of 
 
     * gas equipment (if the input rooms have it)
 
+    * process load (if the input rooms have it)
+
     * service hot water (if the input rooms have it)
 * ##### cooling
 A monthly Data Collection for the cooling load intensity in kWh/m2. 
@@ -55,6 +59,8 @@ A monthly Data Collection for the heating load intensity in kWh/m2.
 A monthly Data Collection for the lighting load intensity in kWh/m2. 
 * ##### equip
 A monthly Data Collection for the equipment load intensity in kWh/m2. Typically, this is only the load from electric equipment but, if the attached _rooms have gas equipment, this will be a list of two data collections for electric and gas equipment respectively. 
+* ##### process
+A monthly Data Collection for the process load intensity in kWh/m2. 
 * ##### hot_water
 A monthly Data Collection for the service hot water load intensity in kWh/m2. 
 * ##### balance

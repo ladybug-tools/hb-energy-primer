@@ -5,11 +5,13 @@
 ![](../../images/icons/PMV_Comfort_Map.png) - [[source code]](https://github.com/ladybug-tools/honeybee-grasshopper-energy/blob/master/honeybee_grasshopper_energy/src//HB%20PMV%20Comfort%20Map.py)
 
 
-Compute spatially-resolved operative temperature and PMV thermal comfort from a Honeybee model. This recipe can also (optionally) compute Standard Effective Temperature (SET). 
+Compute spatially-resolved operative temperature and Predicted Mean Vote (PMV) thermal comfort from a Honeybee model. This recipe can also (optionally) compute Standard Effective Temperature (SET). 
 
-This recipe uses EnergyPlus to obtain longwave radiant temperatures and indoor air temperatures. The outdoor air temperature and air speed are taken directly from the EPW. A Radiance-based, enhanced 2-phase method is used for shortwave MRT calculations, which uses an accurate direct sun calculation with precise solar positions. 
+This recipe uses EnergyPlus to obtain surface temperatures and indoor air temperatures + humidities. Outdoor air temperatures, relative humidities, and air speeds are taken directly from the EPW. The energy properties of the model geometry are what determine the outcome of the simulation, though the model's Radiance sensor grids are what determine where the comfort mapping occurs. 
 
-The energy properties of the model geometry are what determine the outcome of the simulation, though the model's Radiance sensor grids are what determine where the comfort mapping occurs. 
+Longwave radiant temperatures are obtained by computing spherical view factors from each sensor to the Room surfaces of the model using Radiance. These view factors are then multiplied by the surface temperatures output by EnergyPlus to yield longwave MRT at each sensor. All indoor shades (eg. those representing furniture) are assumed to be at the room-average MRT. 
+
+A Radiance-based enhanced 2-phase method is used for all shortwave MRT calculations, which precisely represents direct sun by tracing a ray from each sensor to the solar position. To determine Thermal Comfort Percent (TCP), the occupancy schedules of the energy model are used. Any hour of the occupancy schedule that is 0.1 or greater will be considered occupied. All hours of the outdoors are considered occupied. 
 
 
 
@@ -24,8 +26,6 @@ Path to a DDY file with design days to be used for the initial sizing calculatio
 A number between -360 and 360 for the counterclockwise difference between the North and the positive Y-axis in degrees. This can also be Vector for the direction to North. (Default: 0). 
 * ##### run_period 
 An AnalysisPeriod to set the start and end dates of the simulation. If None, the simulation will be annual. 
-* ##### sensor_count 
-Integer for the maximum number of sensor grid points per parallel execution. (Default: 200). 
 * ##### write_set_map 
 A boolean to note whether the output temperature CSV should record Operative Temperature or Standard Effective Temperature (SET). SET is relatively intense to compute and so only recording Operative Temperature can greatly reduce run time, particularly when air speeds are low. However, SET accounts for all 6 PMV model inputs and so is a more representative "feels-like" temperature for the PMV model. 
 * ##### air_speed 

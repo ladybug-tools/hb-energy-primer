@@ -11,7 +11,7 @@ Create a simulation parameter object that carries a complete set of EnergyPlus s
 
 #### Inputs
 * ##### north 
-A number between -360 and 360 for the counterclockwise difference between the North and the positive Y-axis in degrees. 90 is West and 270 is East. Note that this is different than the convention used in EnergyPlus, which uses clockwise difference instead of counterclockwise difference. This can also be Vector for the direction to North. (Default: 0) 
+A number between -360 and 360 for the counterclockwise difference between the North and the positive Y-axis in degrees. 90 is West and 270 is East. (Default: 0) 
 * ##### output 
 A SimulationOutput that lists the desired outputs from the simulation and the format in which to report them. This can be created using the "HB Simulation Output" component. Default is to request zone energy use at an hourly timestep. 
 * ##### run_period 
