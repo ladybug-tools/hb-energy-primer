@@ -24,6 +24,8 @@ DataCollections for the electric lighting energy used for each room in kWh.
 DataCollections for the electric equipment energy used for each room in kWh. 
 * ##### gas_equip
 DataCollections for the gas equipment energy used for each room in kWh. 
+* ##### process
+DataCollections for the process load energy used for each room in kWh. 
 * ##### hot_water
 DataCollections for the service hote water energy used for each room in kWh. 
 * ##### fan_electric

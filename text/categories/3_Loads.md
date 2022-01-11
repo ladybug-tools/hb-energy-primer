@@ -9,6 +9,7 @@
 * ![IMAGE](../../images/icons/Infiltration.png) [Infiltration](../components/Infiltration.md)
 * ![IMAGE](../../images/icons/Lighting.png) [Lighting](../components/Lighting.md)
 * ![IMAGE](../../images/icons/People.png) [People](../components/People.md)
+* ![IMAGE](../../images/icons/Process_Load.png) [Process Load](../components/Process_Load.md)
 * ![IMAGE](../../images/icons/Service_Hot_Water.png) [Service Hot Water](../components/Service_Hot_Water.md)
 * ![IMAGE](../../images/icons/Setpoint.png) [Setpoint](../components/Setpoint.md)
 * ![IMAGE](../../images/icons/Ventilation.png) [Ventilation](../components/Ventilation.md)

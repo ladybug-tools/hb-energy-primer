@@ -17,6 +17,8 @@ An optional list of Honeybee Shades that can block the sun to the input _rooms.
 * ##### ddy_file [Required]
 Path to a .ddy file on your system as a text string, which contains design day conditions for the peak load analysis. This can also be the path to an .epw file, in which case design days will be determined by statitically analysing the annual data to approximate 0.4% and 99.6% design conditions. Note that .ddy files can also be created using the "DF Construct Design Day" and "DF Write DDY" components. 
 When constructing custom design days, it is recommended that the .ddy file contain only one summer and one winter design day. If mutliple summer or winter design days are found, they will be filtered according to their name in order to identify the 0.4% and 99.6% design conditions for the sensible (dry bulb temperature) design days. 
+* ##### north 
+A number between -360 and 360 for the counterclockwise difference between the North and the positive Y-axis in degrees. 90 is West and 270 is East. (Default: 0). 
 * ##### timestep 
 An integer for the number of timesteps per hour at which the energy simulation will be run and results reported. It is recommended that this be at least 6 but it can be increased to better capture the minute in which peak cooling occurs. (Default: 6). The following values are acceptable: (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) 
 * ##### run_bal 

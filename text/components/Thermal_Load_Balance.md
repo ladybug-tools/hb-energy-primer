@@ -22,6 +22,8 @@ Array of data collections for 'Zone Lights Heating Energy'.
 Array of data collections for 'Zone Electric Equipment Heating Energy'. 
 * ##### gas_equip 
 Array of data collections for 'Zone Gas Equipment Heating Energy'. 
+* ##### process 
+Array of data collections for 'Zone Other Equipment Total Heating Energy'. 
 * ##### hot_water 
 Array of data collections for 'Water Use Equipment Zone Heat Gain Energy' that correspond to the input rooms. 
 * ##### people_gain 
@@ -42,9 +44,9 @@ An array of data collections for the surface heat loss (negative) or heat gain (
 ... 
 * ##### balance
 A list of data collections where each collection represents a load balance term. This can then be plugged into the "LB Hourly Plot" or "LB Monthly Chart" to give a visualization of the load balance over all connected Rooms. 
-* ##### balance_storage
+* ##### balance_stor
 The balance output plus an additional term to represent the remainder of the load balance. This term is labeled "Storage" since it typically represents the energy being stored in the building's mass. If this term is particularly large, it can indicate that not all of the load balance terms have been plugged into this component. 
 * ##### norm_bal
 A list of data collections where each collection represents a load balance term that has bee normalized by the Room floor area. This can then be plugged into the "LB Hourly Plot" or "LB Monthly Chart" to give a visualization of the load balance over all connected Rooms. 
-* ##### norm_bal_storage
+* ##### norm_bal_stor
 The norm_bal output plus an additional term to represent the remainder of the load balance. This term is labeled "Storage" since it typically represents the energy being stored in the building's mass. If this term is particularly large, it can indicate that not all of the load balance terms have been plugged into this component. 

@@ -6,3 +6,5 @@
 * ![IMAGE](../../images/icons/DOAS_HVAC_Templates.png) [DOAS HVAC Templates](../components/DOAS_HVAC_Templates.md)
 * ![IMAGE](../../images/icons/HeatCool_HVAC.png) [HeatCool HVAC](../components/HeatCool_HVAC.md)
 * ![IMAGE](../../images/icons/HeatCool_HVAC_Templates.png) [HeatCool HVAC Templates](../components/HeatCool_HVAC_Templates.md)
+* ![IMAGE](../../images/icons/SHW_System.png) [SHW System](../components/SHW_System.md)
+* ![IMAGE](../../images/icons/SHW_Templates.png) [SHW Templates](../components/SHW_Templates.md)
