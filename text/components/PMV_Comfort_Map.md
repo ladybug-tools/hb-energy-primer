@@ -26,6 +26,8 @@ Path to a DDY file with design days to be used for the initial sizing calculatio
 A number between -360 and 360 for the counterclockwise difference between the North and the positive Y-axis in degrees. This can also be Vector for the direction to North. (Default: 0). 
 * ##### run_period 
 An AnalysisPeriod to set the start and end dates of the simulation. If None, the simulation will be annual. 
+* ##### add_str 
+THIS OPTION IS FOR ADVANCED USERS OF ENERGYPLUS. You can input additional text strings here to be appended to the IDF before energy simulation.  The input should be complete EnergyPlus objects following the IDF format. This input can be used to write objects into the IDF that are not currently supported by Honeybee. 
 * ##### write_set_map 
 A boolean to note whether the output temperature CSV should record Operative Temperature or Standard Effective Temperature (SET). SET is relatively intense to compute and so only recording Operative Temperature can greatly reduce run time, particularly when air speeds are low. However, SET accounts for all 6 PMV model inputs and so is a more representative "feels-like" temperature for the PMV model. 
 * ##### air_speed 
@@ -48,6 +50,18 @@ Set to True to run the recipe and get results. This input can also be the intege
 #### Outputs
 * ##### report
 Reports, errors, warnings, etc. 
+* ##### env_conds
+A folder containing CSV matrices with all of the environmental conditions that were input to the comfort model. These can be loaded into Grasshopper using the "HB Read Environment Matrix" component. This includes the following. 
+
+    * MRT
+
+    * Air Temperature
+
+    * Relative Humidity
+
+    * Longwave MRT
+
+    * Shortwave MRT Delta
 * ##### temperature
 A folder containing CSV maps of Operative Temperature for each sensor grid at each time step of the analysis. Alternatively, if the write_set_map_ option is used, the CSV maps here will contain Standard Effective Temperature (SET). This can be connected to the "HB Read Thermal Matrix" component to parse detailed results into Grasshopper. Values are in Celsius. 
 * ##### condition

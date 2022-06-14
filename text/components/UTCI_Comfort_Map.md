@@ -11,7 +11,7 @@ This recipe uses EnergyPlus to obtain surface temperatures and indoor air temper
 
 Longwave radiant temperatures are obtained by computing spherical view factors from each sensor to the Room surfaces of the model using Radiance. These view factors are then multiplied by the surface temperatures output by EnergyPlus to yield longwave MRT at each sensor. For outdoor sensors, each sensor's sky view is multiplied by the EPW sky temperature to account for longwave radiant exchange with the sky. All outdoor context shades and the ground are assumed to be at the EPW air temperature unless they have been modeled as Honeybee rooms. 
 
-A Radiance-based enhanced 2-phase method is used for all shortwave MRT calculations, which precisely represents direct sun by tracing a ray from each sensor to the solar position. To determine Thermal Comfort Percent (TCP), the occupancy schedules of the energy model are used. Any hour of the occupancy schedule that is 0.1 or greater will be considered occupied. All hours of the outdoors are considered occupied. 
+A Radiance-based enhanced 2-phase method is used for all shortwave MRT calculations, which precisely represents direct sun by tracing a ray from each sensor to the solar position. To determine Thermal Comfort Percent (TCP), the occupancy schedules of the energy model are used for indoor sensors if no schedule_ is input. Any hour of the energy model occupancy schedule that is 0.1 or greater will be considered occupied. If no schedule_ is input, all hours of the outdoors are considered occupied. 
 
 
 
@@ -20,14 +20,18 @@ A Radiance-based enhanced 2-phase method is used for all shortwave MRT calculati
 A Honeybee Model for which UTCI comfort will be mapped. Note that this model should have radiance grids assigned to it in order to produce meaningful results. 
 * ##### epw [Required]
 Path to an EPW weather file to be used for the comfort map simulation. 
-* ##### ddy [Required]
-Path to a DDY file with design days to be used for the initial sizing calculation of the energy simulation. 
+* ##### ddy 
+Path to a DDY file with design days to be used for the initial sizing calculation of the energy simulation. Providing this input is important when there are conditioned Room geometries in the model, in which case the sizing of the building heating/cooling systems is important for modeling the heat exchange between indoors and outdoors. Otherwise, it can be ignored with little consequence for the simulation. 
 * ##### north 
 A number between -360 and 360 for the counterclockwise difference between the North and the positive Y-axis in degrees. This can also be Vector for the direction to North. (Default: 0). 
 * ##### run_period 
 An AnalysisPeriod to set the start and end dates of the simulation. If None, the simulation will be annual. 
 * ##### wind_speed 
-A single number for meteorological wind speed in m/s or an hourly data collection of wind speeds that align with the input run_period_. This will be used for all indoor comfort evaluation. Note that the EPW wind speed will be used for any outdoor sensors. (Default: 0.5). 
+A single number for meteorological wind speed in m/s or an hourly data collection of wind speeds that align with the input run_period_. This will be used for all outdoor comfort evaluation. 
+This can also be the path to a folder with csv files that align with the model sensor grids. Each csv file should have the same name as the sensor grid. Each csv file should contain a matrix of air speed values in m/s with one row per sensor and one column per timestep of the run period. Note that, when using this type of matrix input, these values are not meteorological and should be AT HUMAN SUBJECT LEVEL. 
+If unspecified, the EPW wind speed will be used for all outdoor sensors and all sensors on the indoors will use a wind speed of 0.5 m/s, which is the lowest acceptable value for the UTCI model. 
+* ##### schedule 
+A schedule to specify the relevant times during which comfort should be evaluated. This must either be a Ladybug Hourly Data Collection that aligns with the input run_period_ or the path to a CSV file with a number of rows equal to the length of the run_period_. If unspecified, it will be assumed that all times are relevant for outdoor sensors and the energy model occupancy schedules will be used for indoor sensors. 
 * ##### solar_body_par 
 Optional solar body parameters from the "LB Solar Body Parameters" object to specify the properties of the human geometry assumed in the shortwave MRT calculation. The default assumes average skin/clothing absorptivity and a human subject always has their back to the sun at a 45-degree angle (SHARP = 135). 
 * ##### radiance_par 
@@ -40,6 +44,18 @@ Set to True to run the recipe and get results. This input can also be the intege
 #### Outputs
 * ##### report
 Reports, errors, warnings, etc. 
+* ##### env_conds
+A folder containing CSV matrices with all of the environmental conditions that were input to the comfort model. These can be loaded into Grasshopper using the "HB Read Environment Matrix" component. This includes the following. 
+
+    * MRT
+
+    * Air Temperature
+
+    * Relative Humidity
+
+    * Longwave MRT
+
+    * Shortwave MRT Delta
 * ##### utci
 A folder containing CSV maps of Universal Thermal Climate Index (UTCI) temperatures for each sensor grid at each time step of the analysis. This can be connected to the "HB Read Thermal Matrix" component to parse detailed results into Grasshopper. Values are in Celsius. 
 * ##### condition

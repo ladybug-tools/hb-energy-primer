@@ -19,7 +19,9 @@ Honeybee Rooms to be converted into plenums.
 * ##### conditioned 
 Boolean to indicate whether the plenum is conditioned with a heating/cooling system. If True, the setpoints of the Room will also be kept in addition to the heating/cooling system (Default: False). 
 * ##### remove_infilt 
-Boolean to indicate whether infiltration should be removed from the Rooms. (Default: False). 
+Boolean to indicate whether infiltration should be removed from the Rooms. If False, infiltration will be preserved and will be the only load assinged to the plenum. (Default: False). 
+* ##### include_floor 
+Boolean to indicate whether the floor area of the plenum contributes to the Model it is a part of. Note that this will not affect the floor_area property of this Room but it will ensure the Room's floor area is excluded from any calculations when the Room is part of a Model and when it is simulated in EnergyPlus. 
 
 #### Outputs
 * ##### rooms

@@ -13,7 +13,9 @@ Run an IDF file through EnergyPlus.
 * ##### idf [Required]
 Path to an IDF file as a text string. This can also be a list of IDF files. 
 * ##### epw_file [Required]
-The full file path to epw weather file that you would like the simulation to run with. 
+Path to an .epw file as a text string. 
+* ##### add_str 
+THIS OPTION IS JUST FOR ADVANCED USERS OF ENERGYPLUS. You can input additional text strings here that you would like written into the IDF.  The strings input here should be complete EnergyPlus objects that are correctly formatted. This input can be used to write objects into the IDF that are not currently supported by Honeybee. 
 * ##### cpu_count 
 An integer to set the number of CPUs used in the execution of each connected IDF file. If unspecified, it will automatically default to one less than the number of CPUs currently available on the machine (or 1 if only one processor is available). 
 * ##### run [Required]
