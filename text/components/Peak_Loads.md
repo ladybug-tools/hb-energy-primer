@@ -15,8 +15,10 @@ A list of Honeybee Rooms for which peak loads will be computed.
 * ##### shades 
 An optional list of Honeybee Shades that can block the sun to the input _rooms. 
 * ##### ddy_file [Required]
-Path to a .ddy file on your system as a text string, which contains design day conditions for the peak load analysis. This can also be the path to an .epw file, in which case design days will be determined by statitically analysing the annual data to approximate 0.4% and 99.6% design conditions. Note that .ddy files can also be created using the "DF Construct Design Day" and "DF Write DDY" components. 
-When constructing custom design days, it is recommended that the .ddy file contain only one summer and one winter design day. If mutliple summer or winter design days are found, they will be filtered according to their name in order to identify the 0.4% and 99.6% design conditions for the sensible (dry bulb temperature) design days. 
+Path to a .ddy file on your system as a text string, which contains design day conditions for the peak load analysis. This can also be the path to an .epw file, in which case design days will be determined by statitically analysing the annual data to approximate 0.4% and 99.6% design conditions. 
+Note that custom .ddy files can be crafted from EPW or STAT data using the "LB EPW to DDY" component. They can also also be created from raw sets of outdoor conditions using the "DF Construct Design Day" and "DF Write DDY" components. 
+When constructing custom DDY files, it is recommended that the .ddy file contain only one summer and one winter design day. Alternatively, if you wish to specify multiple cooling design day conditions for each month of the year (to evaluate solar load in each month), each of these cooling design days should contain "0.4%" in the design day name along with " DB=>MWB". This convention will automatically be followed when using the "monthly_cool_" option on the "LB EPW to DDY" component. 
+In this situation of multiple monthly cooling design days, this component will report peak_cool zone sizes that correspond to the highest month for each zone and the output cooling data collection will be for the month with the highest coincident peak cooling. 
 * ##### north 
 A number between -360 and 360 for the counterclockwise difference between the North and the positive Y-axis in degrees. 90 is West and 270 is East. (Default: 0). 
 * ##### timestep 

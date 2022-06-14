@@ -22,7 +22,7 @@ All values for the typical soil_types are taken from the Engineering Toolbox, sp
 Honeybee Rooms to be converted into ground objects. 
 * ##### soil_constr 
 An OpaqueConstruction that reflects the soil type of the ground. This can also be text for a construction to be looked up in the opaque construction library. If a multi-layered construction is input, the multiple layers will only be used for the roof Face of the Room and all other Faces will get a construction with the inner-most layer assigned. Some common types of soil constructions contained in the default honeybee standards library are listed below. (Default: Concrete Pavement). 
-Dry Sand Dry Dust Moist Soil Mud Concrete Pavement Asphalt Pavement Solid Rock 
+Grassy Lawn Dry Sand Dry Dust Moist Soil Mud Concrete Pavement Asphalt Pavement Solid Rock 
 
 #### Outputs
 * ##### rooms

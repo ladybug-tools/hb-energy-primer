@@ -21,4 +21,5 @@
 * ![IMAGE](../../images/icons/Window_Material.png) [Window Material](../components/Window_Material.md)
 * ![IMAGE](../../images/icons/Blind_Material.png) [Blind Material](../components/Blind_Material.md)
 * ![IMAGE](../../images/icons/Custom_Window_Gap_Material.png) [Custom Window Gap Material](../components/Custom_Window_Gap_Material.md)
+* ![IMAGE](../../images/icons/Vegetation_Material.png) [Vegetation Material](../components/Vegetation_Material.md)
 * ![IMAGE](../../images/icons/Window_Construction_Dynamic.png) [Window Construction Dynamic](../components/Window_Construction_Dynamic.md)

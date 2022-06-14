@@ -27,9 +27,9 @@ A list of 24 values that represent the schedule values at each hour of Saturday.
 * ##### holiday 
 An optional list of 24 values that represent the schedule values at each hour of holidays. This can also be a single constant value for the whole day. If no values are input here, the schedule for Sunday will be used for all holidays. 
 * ##### summer_des 
-An optional list of 24 values that represent the schedule values at each hour of the summer design day. This can also be a single constant value for the whole day. If None, the daily schedule with the highest average value will be used. 
+An optional list of 24 values that represent the schedule values at each hour of the summer design day. This can also be a single constant value for the whole day. If None, the daily schedule with the highest average value will be used unless the _type_limit_ is Temperature, in which case it will be the daily schedule with the lowest average value. 
 * ##### winter_des 
-An optional list of 24 values that represent the schedule values at each hour of the summer design day. This can also be a single constant value for the whole day. If None, the daily schedule with the lowest average value will be used. 
+An optional list of 24 values that represent the schedule values at each hour of the summer design day. This can also be a single constant value for the whole day. If None, the daily schedule with the lowest average value will be used unless the _type_limit_ is Temperature, in which case it will be the daily schedule with the highest average value. 
 * ##### name 
 Text to set the name for the Schedule and to be incorporated into a unique Schedule identifier. 
 * ##### type_limit 
