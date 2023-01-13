@@ -25,6 +25,6 @@ Text to set the name for the heating/cooling system and to be incorporated into 
 
 #### Outputs
 * ##### report
-Script variable OSHVACSystems 
+Reports, errors, warnings, etc. 
 * ##### rooms
 The input Rooms with a heating/cooling system applied. 

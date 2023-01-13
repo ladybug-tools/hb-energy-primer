@@ -40,3 +40,5 @@ A list of honeybee Face, Aperture and Door objects that have been matched to the
 A list of color objects that align with the output faces. These can be connected to a native Grasshopper "Custom Preview" component in order to color room volumes with results. 
 * ##### values
 A list of numbers for each of the faces, which are used to generate the colors. 
+* ##### vis_set
+An object containing VisualizationSet arguments for drawing a detailed version of the ColorRoom in the Rhino scene. This can be connected to the "LB Preview Visualization Set" component to display this version of the visualization in Rhino. 

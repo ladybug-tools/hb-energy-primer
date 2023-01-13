@@ -45,6 +45,6 @@ Boolean to note whether demand controlled ventilation should be used on the syst
 
 #### Outputs
 * ##### report
-Script variable OSHVACSystems 
+Reports, errors, warnings, etc. 
 * ##### rooms
 The input Rooms with an all-air HVAC system applied. 

@@ -33,6 +33,6 @@ An optional On/Off discrete schedule to set when the dedicated outdoor air syste
 
 #### Outputs
 * ##### report
-Script variable OSHVACSystems 
+Reports, errors, warnings, etc. 
 * ##### rooms
 The input Rooms with a DOAS HVAC system applied. 

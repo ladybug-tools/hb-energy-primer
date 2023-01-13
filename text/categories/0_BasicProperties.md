@@ -19,4 +19,5 @@
 * ![IMAGE](../../images/icons/Plenum.png) [Plenum](../components/Plenum.md)
 * ![IMAGE](../../images/icons/Ground.png) [Ground](../components/Ground.md)
 * ![IMAGE](../../images/icons/Internal_Mass.png) [Internal Mass](../components/Internal_Mass.md)
+* ![IMAGE](../../images/icons/Other_Side_Temperature.png) [Other Side Temperature](../components/Other_Side_Temperature.md)
 * ![IMAGE](../../images/icons/Patch_Missing_Adjacency.png) [Patch Missing Adjacency](../components/Patch_Missing_Adjacency.md)
