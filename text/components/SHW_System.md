@@ -37,6 +37,6 @@ A number for the loss of heat from the water heater tank to the surrounding ambi
 
 #### Outputs
 * ##### report
-Script variable OSHVACSystems 
+Reports, errors, warnings, etc. 
 * ##### rooms
 The input Rooms with a Service Hot Water system applied. 

@@ -16,6 +16,8 @@ Note that the _materials should be ordered from outermost (exterior) layer to th
 Text to set the name for the Construction and to be incorporated into a unique Construction identifier. 
 * ##### materials [Required]
 List of materials in the construction (from exterior to interior). These materials can be either fully-detailed material objects built with the material components or text for a material identifier to be looked up in the window material library. Note that a native Grasshopper "Merge" component can be used to help order the materials correctly for the input here. 
+* ##### frame 
+An optional window frame material to denote the frame that surrounds the window construction. Frame materials can be created using the "HB Window Frame" component. 
 
 #### Outputs
 * ##### constr

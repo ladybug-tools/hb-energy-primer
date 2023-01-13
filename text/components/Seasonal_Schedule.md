@@ -16,11 +16,15 @@ A ScheduleRuleset that represents the base schedule on top of which the other _s
 A list of ScheduleRulesets that align with the _analysis_periods below and represent the schedules that will be applied over the _base_schedule for the duration of the respective AnalysisPeriod. This can also be text to look up ScheduleRulesets in the schedule library. 
 * ##### analysis_periods [Required]
 A list of AnalysusPeriod objects that align with the _season_scheds and represent the time periods over which each season schedule should be applied. Note that, if these AnalysisPeriods overlap with one another, then the schedules that come later in this list will overwrite those that come earlier in the list for the duration of the overlapping time period. 
+* ##### summer_des 
+An optional list of 24 values that represent the schedule values at each hour of the summer design day. This can also be a single constant value for the whole day. If None, the summer design day schedule of the _base_schedule will be used. 
+* ##### winter_des 
+An optional list of 24 values that represent the schedule values at each hour of the summer design day. This can also be a single constant value for the whole day. If None, the summer design day schedule of the _base_schedule will be used. 
 * ##### name 
 Text to set the name for the Schedule and to be incorporated into a unique Schedule identifier. 
 
 #### Outputs
-* ##### report
+* ##### out
 Reports, errors, warnings, etc. 
 * ##### schedule
 A ScheduleRuleset object that can be assigned to a Room, a Load object, or a ProgramType object. 
