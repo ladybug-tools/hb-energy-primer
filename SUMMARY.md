@@ -100,6 +100,7 @@
 		* [HeatCool HVAC Templates](text/components/HeatCool_HVAC_Templates.md)
 		* [SHW System](text/components/SHW_System.md)
 		* [SHW Templates](text/components/SHW_Templates.md)
+		* [Detailed HVAC](text/components/Detailed_HVAC.md)
 		* [Radiant HVAC Properties](text/components/Radiant_HVAC_Properties.md)
 	* [5 :: Simulate](text/categories/5_Simulate.md)
 		* [Model to OSM](text/components/Model_to_OSM.md)

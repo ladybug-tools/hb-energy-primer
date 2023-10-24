@@ -15,9 +15,31 @@ An optional path to a .ddy file on your system, which contains information about
 * ##### filter_ddays 
 Boolean to note whether the design days in the ddy_file_ should be filtered to only include 99.6% and 0.4% design days. If None or False, all design days in the ddy_file_ will be incorporated into the sizing parameters. This can also be the integer 2 to filter for 99.0% and 1.0% design days. 
 * ##### heating_fac 
-A number that will get multiplied by the peak heating load for each zone in the model in order to size the heating system for the model. Must be greater than 0. Default: 1.25. 
+A number that will get multiplied by the peak heating load for each zone in the model in order to size the heating system for the model. Must be greater than 0. (Default: 1.25). 
 * ##### cooling_fac 
-A number that will get multiplied by the peak cooling load for each zone in the model in order to size the cooling system for the model. Must be greater than 0. Default: 1.15. 
+A number that will get multiplied by the peak cooling load for each zone in the model in order to size the cooling system for the model. Must be greater than 0. (Default: 1.15). 
+* ##### eff_standard 
+Text to specify the efficiency standard, which will automatically set the efficiencies of all HVAC equipment when provided. Note that providing a standard here will cause the OpenStudio translation process to perform an additional sizing calculation with EnergyPlus, which is needed since the default efficiencies of equipment vary dependingon their size. THIS WILL SIGNIFICANTLY INCREASE TRANSLATION TIME TO OPENSTUDIO. However, it is often worthwhile when the goal is to match the HVAC specification with a particular standard. The "HB Building Vintages" component has a full list of supported HVAC efficiency standards. You can also choose from the following. 
+
+    * DOE_Ref_Pre_1980
+
+    * DOE_Ref_1980_2004
+
+    * ASHRAE_2004
+
+    * ASHRAE_2007
+
+    * ASHRAE_2010
+
+    * ASHRAE_2013
+
+    * ASHRAE_2016
+
+    * ASHRAE_2019
+* ##### climate_zone 
+Script variable SizingPar 
+* ##### bldg_type 
+Script variable SizingPar 
 
 #### Outputs
 * ##### sizing

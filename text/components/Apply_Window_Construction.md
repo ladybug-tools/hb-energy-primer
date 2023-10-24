@@ -13,7 +13,7 @@ This component supports the assigning of different constructions based on cardin
 
 #### Inputs
 * ##### hb_objs [Required]
-Honeybee Apertures, Faces, Doors or Rooms to which the input _constr should be assigned. For the case of a Honeybee Room, the construction will only be applied to the apertures in the the Room's outdoor walls. Note that, if you need to assign a construction to all the skylights, glass doors, etc. of a Room, the best practice is to create a ConstructionSet and assing that to the Room. 
+Honeybee Apertures, Faces, Doors, Rooms or a Model to which the input _constr should be assigned. For the case of a Room or a Model, the construction will only be applied to the apertures in the the Room's outdoor walls. Note that, if you need to assign a construction to all the skylights, glass doors, etc. of a Room, the best practice is to create a ConstructionSet and assing that to the Room. 
 * ##### constr [Required]
 A Honeybee WindowConstruction or WindowConstructionShade to be applied to the input _hb_objs. This can also be text for a construction to be looked up in the window construction library. If an array of text or construction objects are input here, different constructions will be assigned based on cardinal direction, starting with north and moving clockwise. 
 

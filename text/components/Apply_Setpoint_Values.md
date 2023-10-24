@@ -11,7 +11,7 @@ Apply values for setpoints to a Room or ProgramType.
 
 #### Inputs
 * ##### room_or_program [Required]
-Honeybee Rooms or ProgramType objects to which the input setpoints should be assigned. This can also be the identifier of a ProgramType to be looked up in the program type library. 
+Honeybee Rooms or ProgramType objects to which the input setpoints should be assigned. This can also be the identifier of a ProgramType to be looked up in the program type library. This can also be a Honeybee Model for which all Rooms will be assigned the setpoints. 
 * ##### cooling_setpt 
 A numerical value for a single constant temperature for the cooling setpoint [C]. 
 * ##### heating_setpt 

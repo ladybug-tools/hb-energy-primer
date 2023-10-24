@@ -9,4 +9,5 @@
 * ![IMAGE](../../images/icons/HeatCool_HVAC_Templates.png) [HeatCool HVAC Templates](../components/HeatCool_HVAC_Templates.md)
 * ![IMAGE](../../images/icons/SHW_System.png) [SHW System](../components/SHW_System.md)
 * ![IMAGE](../../images/icons/SHW_Templates.png) [SHW Templates](../components/SHW_Templates.md)
+* ![IMAGE](../../images/icons/Detailed_HVAC.png) [Detailed HVAC](../components/Detailed_HVAC.md)
 * ![IMAGE](../../images/icons/Radiant_HVAC_Properties.png) [Radiant HVAC Properties](../components/Radiant_HVAC_Properties.md)

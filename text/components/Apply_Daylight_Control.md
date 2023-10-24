@@ -13,7 +13,7 @@ Such simple controls will dim the lights in the energy simulation according to w
 
 #### Inputs
 * ##### rooms [Required]
-Honeybee Rooms to which simple daylight controls should be assigned. 
+Honeybee Rooms to which simple daylight controls should be assigned. This can also be a Honeybee Model for which all Rooms will be assigned daylight control sensors. 
 * ##### sensor_points 
 A list of point objects that align with the input _rooms and assign the position of the daylight sensor within the Room. This point should lie within the Room volume and a warning will be thrown and no daylight controls assigned for any point that lies outside the corresponding room. If unspecified, the sensor will be assigned to the center of the room at 0.8 meters above the floor. Note that such a center point might lie outside rooms that are significantly concave and no daylight controls will be assigned to these rooms in this case. 
 * ##### ill_setpoint 

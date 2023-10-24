@@ -13,7 +13,7 @@ This component will not edit any of the schedule objects associated with each lo
 
 #### Inputs
 * ##### room_or_program [Required]
-Honeybee Rooms or ProgramType objects to which the input load objects should be assigned. This can also be the identifier of a ProgramType to be looked up in the program type library. 
+Honeybee Rooms or ProgramType objects to which the input load objects should be assigned. This can also be the identifier of a ProgramType to be looked up in the program type library. This can also be a Honeybee Model for which all Rooms will be assigned the loads. 
 * ##### people_per_floor 
 A numerical value for the number of people per square meter of floor area. 
 * ##### lighting_per_floor 
