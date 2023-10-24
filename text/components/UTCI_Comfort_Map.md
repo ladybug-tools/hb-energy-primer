@@ -32,6 +32,8 @@ This can also be the path to a folder with csv files that align with the model s
 If unspecified, the EPW wind speed will be used for all outdoor sensors and all sensors on the indoors will use a wind speed of 0.5 m/s, which is the lowest acceptable value for the UTCI model. 
 * ##### schedule 
 A schedule to specify the relevant times during which comfort should be evaluated. This must either be a Ladybug Hourly Data Collection that aligns with the input run_period_ or the path to a CSV file with a number of rows equal to the length of the run_period_. If unspecified, it will be assumed that all times are relevant for outdoor sensors and the energy model occupancy schedules will be used for indoor sensors. 
+* ##### comfort_par 
+Optional comfort parameters from the "LB UTCI Comfort Parameters" component to specify the temperatures (in Celcius) that are considered acceptable/comfortable. The default will assume a that the comfort range is between 9C and 26C. 
 * ##### solar_body_par 
 Optional solar body parameters from the "LB Solar Body Parameters" object to specify the properties of the human geometry assumed in the shortwave MRT calculation. The default assumes average skin/clothing absorptivity and a human subject always has their back to the sun at a 45-degree angle (SHARP = 135). 
 * ##### radiance_par 

@@ -13,7 +13,7 @@ This component supports the assigning of different schedules based on cardinal o
 
 #### Inputs
 * ##### hb_objs [Required]
-Honeybee Shades, Apertures, Door, Faces, or Rooms to which the input _trans_sch should be assigned. For the case of a Honeybee Aperture, Door, Face or Room, the ShadeConstruction will be assigned to only the child shades directly assigned to that object. So passing in a Room will not change the schedule of shades assigned to Apertures of the Room's Faces. If this is the desired outcome, then the Room should be deconstructed into its child objects before using this component. 
+Honeybee Shades, Apertures, Door, Faces, Rooms or a Model to which the input _trans_sch should be assigned. For the case of a Honeybee Aperture, Door, Face, Room, or Model, the ShadeConstruction will be assigned to only the child shades directly assigned to that object. So passing in a Room will not change the schedule of shades assigned to Apertures of the Room's Faces. If changing these sub-children is the desired outcome, then the Room should be deconstructed into its child objects before using this component. 
 * ##### trans_sch [Required]
 A Honeybee ScheduleRuleset or ScheduleFixedInterval to be applied to the input _hb_objs. This can also be text for a schedule to be looked up in the shade schedule library. If an array of text or schedule objects are input here, different schedules will be assigned based on cardinal direction, starting with north and moving clockwise. 
 

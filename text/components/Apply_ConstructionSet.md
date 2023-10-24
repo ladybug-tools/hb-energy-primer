@@ -5,13 +5,13 @@
 ![](../../images/icons/Apply_ConstructionSet.png) - [[source code]](https://github.com/ladybug-tools/honeybee-grasshopper-energy/blob/master/honeybee_grasshopper_energy/src//HB%20Apply%20ConstructionSet.py)
 
 
-Apply ConstructionSet to Honeybee Rooms. 
+Apply ConstructionSet to Honeybee Rooms or a Model. 
 
 
 
 #### Inputs
 * ##### rooms [Required]
-Honeybee Rooms to which the input _constr_set should be assigned. 
+Honeybee Rooms to which the input _constr_set should be assigned. This can also be a Honeybee Model for which all Rooms will be assigned the ConstructionSet. 
 * ##### constr_set [Required]
 A Honeybee ConstructionSet to be applied to the input _room. This can also be text for a construction set to be looked up in the construction set library. 
 

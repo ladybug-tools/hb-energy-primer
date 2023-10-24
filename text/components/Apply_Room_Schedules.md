@@ -5,7 +5,7 @@
 ![](../../images/icons/Apply_Room_Schedules.png) - [[source code]](https://github.com/ladybug-tools/honeybee-grasshopper-energy/blob/master/honeybee_grasshopper_energy/src//HB%20Apply%20Room%20Schedules.py)
 
 
-Apply schedules to a Room or ProgramType. 
+Apply schedules to a Room, Model or ProgramType. 
 
 Note that, if a schedule is assigned to a Room or ProgramType that posseses no value for a given load, an error will be raised. For example, assigning a gas_equip_sch_ to a Room that has no GasEquipment object associated with it. This situation can be avoided by first passing the Rooms or ProgramTypes through the "HB Apply Load Values" component to eastablish a value for a given load. 
 
@@ -13,7 +13,7 @@ Note that, if a schedule is assigned to a Room or ProgramType that posseses no v
 
 #### Inputs
 * ##### room_or_program [Required]
-Honeybee Rooms or Honeybee ProgramType objects for which schedules should be changed. This can also be the identifier of a ProgramType to be looked up in the program type library. 
+Honeybee Rooms or Honeybee ProgramType objects for which schedules should be changed. This can also be the identifier of a ProgramType to be looked up in the program type library. This can also be a Honeybee Model for which all Rooms will be assigned the schedules. 
 * ##### occupancy_sch 
 A fractional schedule for the occupancy over the course of the year. This can also be the identifier of a schedule to be looked up in the schedule library. 
 * ##### activity_sch 
