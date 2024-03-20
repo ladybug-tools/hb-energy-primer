@@ -19,7 +19,7 @@ A honeybee Energy SimulationParameter object that describes all of the setting f
 * ##### measures 
 An optional list of measures to apply to the OpenStudio model upon export. Use the "HB Load Measure" component to load a measure into Grasshopper and assign input arguments. Measures can be downloaded from the NREL Building Components Library (BCL) at 
 * ##### add_str 
-THIS OPTION IS JUST FOR ADVANCED USERS OF ENERGYPLUS. You can input additional text strings here that you would like written into the IDF.  The input here should be complete EnergyPlus objects as a single string following the IDF format. This input ca be used to write objects into the IDF that are not currently supported by Honeybee. 
+THIS OPTION IS JUST FOR ADVANCED USERS OF ENERGYPLUS. You can input additional text strings here that you would like written into the IDF.  The input here should be complete EnergyPlus objects as a single string following the IDF format. This input can be used to write objects into the IDF that are not currently supported by Honeybee. 
 * ##### folder 
 An optional folder on this computer, into which the IDF and result files will be written. 
 * ##### write [Required]

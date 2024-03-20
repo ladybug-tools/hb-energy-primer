@@ -1,8 +1,8 @@
-## Apply Abolute Load Values
+## Apply Absolute Load Values
 
-![](../../images/components/Apply_Abolute_Load_Values.png)
+![](../../images/components/Apply_Absolute_Load_Values.png)
 
-![](../../images/icons/Apply_Abolute_Load_Values.png) - [[source code]](https://github.com/ladybug-tools/honeybee-grasshopper-energy/blob/master/honeybee_grasshopper_energy/src//HB%20Apply%20Abolute%20Load%20Values.py)
+![](../../images/icons/Apply_Absolute_Load_Values.png) - [[source code]](https://github.com/ladybug-tools/honeybee-grasshopper-energy/blob/master/honeybee_grasshopper_energy/src//HB%20Apply%20Absolute%20Load%20Values.py)
 
 
 Apply absolute load values to Rooms. 

@@ -22,3 +22,7 @@ DataCollections for the mean air temperature of each room (C).
 DataCollections for the mean radiant temperature of each room (C). 
 * ##### rel_humidity
 DataCollections for the relative humidity of each room (%). 
+* ##### unmet_heat
+DataCollections for time that the heating setpoint is not met in each room (hours). 
+* ##### unmet_cool
+DataCollections for time that the cooling setpoint is not met in each room (hours). 
