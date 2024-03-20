@@ -37,9 +37,51 @@ Text to specify the efficiency standard, which will automatically set the effici
 
     * ASHRAE_2019
 * ##### climate_zone 
-Script variable SizingPar 
+Text indicating the ASHRAE climate zone to be used with the efficiency_standard. When unspecified, the climate zone will be inferred from the design days. This input can be a single integer (in which case it is interpreted as A) or it can include the A, B, or C qualifier (eg. 3C). Typically, the "LB Import STAT" component can yield the climate zone for a particular location. 
 * ##### bldg_type 
-Script variable SizingPar 
+Text for the building type to be used in the efficiency_standard. If the type is not recognized or is None, it will be assumed that the building is a generic NonResidential. The following have meaning for the standard. 
+
+    * NonResidential
+
+    * Residential
+
+    * MidriseApartment
+
+    * HighriseApartment
+
+    * LargeOffice
+
+    * MediumOffice
+
+    * SmallOffice
+
+    * Retail
+
+    * StripMall
+
+    * PrimarySchool
+
+    * SecondarySchool
+
+    * SmallHotel
+
+    * LargeHotel
+
+    * Hospital
+
+    * Outpatient
+
+    * Warehouse
+
+    * SuperMarket
+
+    * FullServiceRestaurant
+
+    * QuickServiceRestaurant
+
+    * Laboratory
+
+    * Courthouse
 
 #### Outputs
 * ##### sizing

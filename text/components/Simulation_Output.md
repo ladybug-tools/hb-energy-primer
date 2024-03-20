@@ -12,12 +12,12 @@ Create a simulation output object by selecting sets of commonly-requested output
 #### Inputs
 * ##### zone_energy_use 
 Set to True to add outputs for zone energy use when ideal air systems are assigned. This includes, ideal air heating + cooling, lighting, electric + gas equipment, and fan electric energy. 
-* ##### hvac_energy_use 
-Set to True to add outputs for HVAC energy use from detailed systems. This includes outputs for different pieces of equipment, which together catch all energy-consuming parts of a system. (eg. chillers, boilers, coils, humidifiers, fans, pumps). 
+* ##### system_energy_use 
+Set to True to add outputs for HVAC energy use from detailed systems. This includes outputs for different pieces of HVAC equipment, which together catch all energy-consuming parts of a system. (eg. chillers, boilers, coils, humidifiers, fans, pumps). It also includes the energy use of components of Service Hot Water (SHW) systems as well as any electricity generated on site, such at that coming from photovoltaics. 
 * ##### gains_and_losses 
 Set to True to Add outputs for zone gains and losses. This includes such as people gains, solar gains, infiltration losses/gains, and ventilation losses/gains. 
 * ##### comfort_metrics 
-Set to True to add outputs for zone thermal comfort analysis. This includes air temperature, mean radiant temperature, relative humidity. 
+Set to True to add outputs for zone thermal comfort analysis. This includes air temperature, mean radiant temperature, relative humidity, and unmet setpoint time. 
 * ##### surface_temperature 
 Set to True to add outputs for indoor and outdoor surface temperature. 
 * ##### surface_energy_flow 

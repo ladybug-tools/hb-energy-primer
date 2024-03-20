@@ -1,7 +1,7 @@
 #### Component list:
 * ![IMAGE](../../images/icons/Apply_ProgramType.png) [Apply ProgramType](../components/Apply_ProgramType.md)
 * ![IMAGE](../../images/icons/Deconstruct_ProgramType.png) [Deconstruct ProgramType](../components/Deconstruct_ProgramType.md)
-* ![IMAGE](../../images/icons/Apply_Abolute_Load_Values.png) [Apply Abolute Load Values](../components/Apply_Abolute_Load_Values.md)
+* ![IMAGE](../../images/icons/Apply_Absolute_Load_Values.png) [Apply Absolute Load Values](../components/Apply_Absolute_Load_Values.md)
 * ![IMAGE](../../images/icons/Apply_Daylight_Control.png) [Apply Daylight Control](../components/Apply_Daylight_Control.md)
 * ![IMAGE](../../images/icons/Apply_Load_Values.png) [Apply Load Values](../components/Apply_Load_Values.md)
 * ![IMAGE](../../images/icons/Apply_Setpoint_Values.png) [Apply Setpoint Values](../components/Apply_Setpoint_Values.md)
@@ -14,6 +14,7 @@
 * ![IMAGE](../../images/icons/Setpoint.png) [Setpoint](../components/Setpoint.md)
 * ![IMAGE](../../images/icons/Ventilation.png) [Ventilation](../components/Ventilation.md)
 * ![IMAGE](../../images/icons/Airflow_Newtwork.png) [Airflow Newtwork](../components/Airflow_Newtwork.md)
+* ![IMAGE](../../images/icons/Fan_Ventilation.png) [Fan Ventilation](../components/Fan_Ventilation.md)
 * ![IMAGE](../../images/icons/Ventilation_Control.png) [Ventilation Control](../components/Ventilation_Control.md)
 * ![IMAGE](../../images/icons/Window_Opening.png) [Window Opening](../components/Window_Opening.md)
 * ![IMAGE](../../images/icons/Blower_Pressure_Converter.png) [Blower Pressure Converter](../components/Blower_Pressure_Converter.md)
