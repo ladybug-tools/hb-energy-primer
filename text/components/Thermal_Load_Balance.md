@@ -38,6 +38,8 @@ An array of data collections for the ventilation heat loss (negative) or heat ga
 An array of data collections for the natural ventilation heat loss (negative) or heat gain (positive). 
 * ##### face_energy_flow 
 An array of data collections for the surface heat loss (negative) or heat gain (positive). 
+* ##### detailed_faces 
+Boolean to note whether the opaque conduction losses should be broken down into walls, roofs, and floors. Setting this to True will also cause storage to be broken down into storage in walls, floors, windows, and air. (Default: False). 
 
 #### Outputs
 * ##### report

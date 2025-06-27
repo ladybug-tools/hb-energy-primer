@@ -15,3 +15,4 @@
 * ![IMAGE](../../images/icons/Run_IDF.png) [Run IDF](../components/Run_IDF.md)
 * ![IMAGE](../../images/icons/Run_OSM.png) [Run OSM](../components/Run_OSM.md)
 * ![IMAGE](../../images/icons/Create_OSM_Measure.png) [Create OSM Measure](../components/Create_OSM_Measure.md)
+* ![IMAGE](../../images/icons/Empty_OSM.png) [Empty OSM](../components/Empty_OSM.md)

@@ -7,7 +7,7 @@
 
 Run Honeybee Rooms through a quick energy simulation to obtain an estimate of annual heating, cooling, lighting, equipment, and service hot water loads. 
 
-Note that the default settings used by this component are only suitable for evaluating annual loads in the case where an error of up to 5% is acceptable. Also note that annual loads are not the same as annual energy use or utility costs and, while the "cop" inputs can be used to approximate some effects of real heating + cooling systems, any evaulation of actual energy use, utility costs, or GHG emissions should be done by modeling a detailed HVAC using the "HB Model to OSM" component. 
+Note that the default settings used by this component are only suitable for evaluating annual loads in the case where an error of up to 5% is acceptable. Also note that annual loads are not the same as annual energy use or utility costs and, while the "cop" inputs can be used to approximate some effects of real heating + cooling systems, any evaluation of actual energy use, utility costs, or GHG emissions should be done by modeling a detailed HVAC using the "HB Model to OSM" component. 
 
 
 
@@ -21,7 +21,7 @@ Path to an .epw file on your system as a text string.
 * ##### north 
 A number between -360 and 360 for the counterclockwise difference between the North and the positive Y-axis in degrees. 90 is West and 270 is East. (Default: 0). 
 * ##### timestep 
-An integer for the number of timesteps per hour at which the energy balance calculation will be run. This has a dramatic impact on the speed of the simulation and the accuracy of results. Higher timesteps lead to longer simulations and more accurate results. At the lowest aceptable timestep of 1, the results can have an error up to 5% but increasing the timestep to 4 should drop errors to below 1%. (Default: 1). The following values are acceptable: (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) 
+An integer for the number of timesteps per hour at which the energy balance calculation will be run. This has a dramatic impact on the speed of the simulation and the accuracy of results. Higher timesteps lead to longer simulations and more accurate results. At the lowest acceptable timestep of 1, the results can have an error up to 5% but increasing the timestep to 4 should drop errors to below 1%. (Default: 1). The following values are acceptable: (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) 
 * ##### cool_cop 
 An optional number which the cooling load will be divided by to account for the relative importance of cooling loads compared to heating loads (aka. the Coefficient of Performance or COP). For most cooling systems, this is value greater than 1, though how much greater varies widely between cooling systems and it is ultimately a function of how close the temperature of the cooling system's heat sink is to the room temperature setpoints. If set to 1, the output cooling will be the energy that must be removed from the _rooms to meet the setpoint (aka. the cooling demand). (Default: 1). 
 * ##### heat_cop 
