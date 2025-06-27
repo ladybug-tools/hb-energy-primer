@@ -12,6 +12,7 @@
 * ![IMAGE](../../images/icons/Balance_Temperature.png) [Balance Temperature](../components/Balance_Temperature.md)
 * ![IMAGE](../../images/icons/Carbon_Emission_Intensity.png) [Carbon Emission Intensity](../components/Carbon_Emission_Intensity.md)
 * ![IMAGE](../../images/icons/Face_Result_by_Type.png) [Face Result by Type](../components/Face_Result_by_Type.md)
+* ![IMAGE](../../images/icons/Filter_Room_Result.png) [Filter Room Result](../components/Filter_Room_Result.md)
 * ![IMAGE](../../images/icons/Normalize_by_Floor_Area.png) [Normalize by Floor Area](../components/Normalize_by_Floor_Area.md)
 * ![IMAGE](../../images/icons/Read_Generation_Result.png) [Read Generation Result](../components/Read_Generation_Result.md)
 * ![IMAGE](../../images/icons/Read_Result_Dictionary.png) [Read Result Dictionary](../components/Read_Result_Dictionary.md)

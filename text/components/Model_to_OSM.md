@@ -23,11 +23,10 @@ THIS OPTION IS JUST FOR ADVANCED USERS OF ENERGYPLUS. You can input additional t
 * ##### folder 
 An optional folder on this computer, into which the IDF and result files will be written. 
 * ##### write [Required]
-Set to "True" to write out the honeybee jsons (containing the Honeybee Model and Simulation Parameters) and write the OpenStudio Workflow (.osw) file with instructions for executing the simulation. 
+Set to "True" to write out the honeybee JSONs (containing the Honeybee Model and Simulation Parameters) and write the OpenStudio Model file (OSM). This process will also write either an EnergyPlus Input Data File (IDF) or an OpenStudio Workflow file (OSW), which can be used to run the model through EnergyPlus. Most models can be simulated with just and IDF and so no OWS will be written. However, an OSW will be used if any measures_ have been connected or if the simulation parameters contain an efficiency standard. 
 * ##### run 
 Set to "True" to translate the Honeybee jsons to an OpenStudio Model (.osm) and EnergyPlus Input Data File (.idf) and then simulate the .idf in EnergyPlus. This will ensure that all result files appear in their respective outputs from this component. 
-This input can also be the integer "2", which will only translate the honeybee jsons to an osm and idf format without running the model through EnergyPlus. 
-It can also be the integer "3", which will run the whole translation and simulation silently (without any batch windows). 
+This input can also be the integer "2", which will run the whole translation and simulation silently (without any batch windows). 
 
 #### Outputs
 * ##### report
@@ -35,7 +34,7 @@ Check here to see a report of the EnergyPlus run.
 * ##### jsons
 The file paths to the honeybee JSON files that describe the Model and SimulationParameter. These will be translated to an OpenStudio model. 
 * ##### osw
-File path to the OpenStudio Workflow JSON on this machine. This workflow is executed using the OpenStudio command line interface (CLI) and it includes measures to translate the Honeybee model JSON as well as any other connected measures_. 
+File path to the OpenStudio Workflow JSON on this machine (if necessary for simulation). This workflow is executed using the OpenStudio command line interface (CLI) and it includes any connected measures_. Will be None if no OSW is needed for the simulation. 
 * ##### osm
 The file path to the OpenStudio Model (OSM) that has been generated on this computer. 
 * ##### idf

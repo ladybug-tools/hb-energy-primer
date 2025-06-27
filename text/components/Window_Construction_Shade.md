@@ -31,7 +31,7 @@ An integer or text to indicate how the shading device is controlled, which deter
 * ##### setpoint 
 A number that corresponds to the specified control_type. This can be a value in (W/m2), (C) or (W) depending upon the control type. 
 * ##### schedule 
-An optional ScheduleRuleset or ScheduleFixedInterval to be applied on top of the control type. If None, the control type will govern all behavior of the construction. 
+An optional ScheduleRuleset or ScheduleFixedInterval to be applied on top of the control type. If specified, the window will only be switched on when both the schedule value is > 0 and and control_type criteria are met. Otherwise, the shade is off. If a schedule is unspecified, the control type will govern all behavior of the construction. 
 
 #### Outputs
 * ##### constr

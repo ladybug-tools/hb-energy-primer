@@ -26,8 +26,6 @@ Text to indicate which faces are thermally active by default. Note that systems 
     * CeilingMetalPanel
 
     * FloorWithHardwood
-* ##### min_op_time 
-A number for the minimum number of hours of operation for the radiant system before it shuts off. (Default: 1). 
 * ##### switch_time 
 A number for the minimum number of hours for when the system can switch between heating and cooling. (Default: 24). 
 

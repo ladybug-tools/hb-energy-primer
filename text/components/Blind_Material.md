@@ -31,7 +31,7 @@ Number between 0 and 1 for the transmittance of solar radiation and visible ligh
 * ##### reflectance 
 Number between 0 and 1 for the reflectance of solar radiation and visible light off of the blind material. (Default: 0.5, which is typical of a painted white blind). 
 * ##### t_infrared 
-Long-wave hemisperical transmittance of the blind material. (Default: 0). 
+Long-wave hemispherical transmittance of the blind material. (Default: 0). 
 * ##### emissivity 
 Number between 0 and 1 for the infrared hemispherical emissivity of the blind material. (Default: 0.9, which is typical of most painted blinds). 
 * ##### dist_to_glass 
