@@ -24,6 +24,12 @@ A numerical value for the design level of ventilation in m3/s for the entire zon
 A numberical value for the design level of ventilation in air changes per hour (ACH) for the entire zone. This will be added to the _flow_per_person_, _flow_per_area_ and _flow_per_zone_ to produce the final minimum outdoor air specification. (Default: 0). 
 * ##### schedule 
 An optional fractional schedule for the ventilation over the course of the year. The fractional values will get multiplied by the total design flow rate (determined from the fields above and the calculation_method) to yield a complete ventilation profile. Setting this schedule to be the occupancy schedule of the zone will mimic demand controlled ventilation. If None, a constant design level of ventilation will be used throughout all timesteps of the simulation. (Default: None). 
+* ##### method 
+Text to set how the different ventilation criteria are reconciled against one another. Choose from the options below. (Default: Sum). 
+
+    * Sum
+
+    * Max
 
 #### Outputs
 * ##### vent
